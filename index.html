@@ -1,351 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishnu Viswanath | AI Developer & Data Scientist</title>
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='vGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300BFFF'/%3E%3Cstop offset='100%25' style='stop-color:%234169E1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50' y='78' font-family='Arial, sans-serif' font-size='80' font-weight='bold' fill='url(%23vGrad)' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishnu Viswanath - AI Engineer & Builder</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0a'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='18' font-weight='700' fill='%231a1aff' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
+<body class="is-loading">
 
-<body>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="pre-top"></div>
+    <div class="pre-bottom"></div>
+    <div class="pre-center">
+      <div class="pre-logo">VV<span>.</span></div>
+      <div class="pre-terminal">
+        <span class="pre-line" id="pline1"></span>
+        <span class="pre-line" id="pline2"></span>
+        <span class="pre-line" id="pline3"></span>
+        <span class="pre-cursor">█</span>
+      </div>
+      <div class="pre-bar-wrap">
+        <div class="pre-bar"></div>
+      </div>
+      <div class="pre-pct">0%</div>
+    </div>
+  </div>
 
-    <div class="hero-background">
-        <div class="matrix-grid"></div>
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="binary-stream binary-left">1011010011010010</div>
-        <div class="binary-stream binary-right">0101100110110101</div>
-        <div class="code-particles">
-            <span>&lt;/&gt;</span>
-            <span>{ }</span>
-            <span>AI</span>
-            <span>01</span>
-            <span>&lambda;</span>
-            <span>ML</span>
-            <span>&sum;</span>
-        </div>
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">VV<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#ventures">Ventures</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:vishnu.viswanath.mm@gmail.com" class="nav-cta">Let's Build →</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+    <ul class="mobile-nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#ventures">Ventures</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:vishnu.viswanath.mm@gmail.com" class="mobile-menu-cta">Let's Build →</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-tag">AI Engineer · Builder · Founder</div>
+      <h1 class="hero-name">Vishnu<br>Viswanath</h1>
+      <p class="hero-tagline">I build AI systems that work in production, and the teams and products around them.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">See My Work</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      scroll
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-number">6<span>+</span></div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">20<span>+</span></div>
+      <div class="stat-label">Projects Shipped</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">2</div>
+      <div class="stat-label">Companies Stakeholder</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">25<span>+</span></div>
+      <div class="stat-label">Team Members Led</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Domains Mastered</div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="reveal">
+      <div class="section-label">Work Experience</div>
+      <h2 class="section-title">Where I've Worked</h2>
     </div>
 
-    <div class="cursor-gradient" aria-hidden="true"></div>
+    <div class="experience-list reveal">
+      <div class="exp-row">
+        <div class="exp-period">Feb 2026<br>Present</div>
+        <div>
+          <div class="exp-title">GenAI Engineer</div>
+          <div class="exp-company">Evolver</div>
+          <div class="exp-location">Palo Alto, California · Remote</div>
+          <div class="exp-desc">Building AI-powered tax solutions with multi-layered RAG architectures. Combining semantic search, structured retrieval, and LLM reasoning to navigate complex tax regulations, automate document analysis, and surface accurate, context-aware answers at scale.</div>
+        </div>
+        <div class="exp-type current">Current</div>
+      </div>
 
-    <nav class="navbar" aria-label="Primary">
-        <ul class="nav-links">
-            <li>
-                <a href="#home">
-                    <span class="nav-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false">
-                            <path d="M3 10.5 12 3l9 7.5V21h-6v-6h-6v6H3Z" />
-                        </svg>
-                    </span>
-                    <span class="nav-label">Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="#about">
-                    <span class="nav-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false">
-                            <path
-                                d="M12 12.75c-2.485 0-4.5-2.015-4.5-4.5S9.515 3.75 12 3.75s4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5Zm-6.75 6.75a6.75 6.75 0 0 1 13.5 0V21H5.25Z" />
-                        </svg>
-                    </span>
-                    <span class="nav-label">About</span>
-                </a>
-            </li>
-            <li>
-                <a href="#projects">
-                    <span class="nav-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false">
-                            <path d="M4 4h6v6H4ZM14 4h6v6h-6ZM4 14h6v6H4ZM14 14h6v6h-6Z" />
-                        </svg>
-                    </span>
-                    <span class="nav-label">Projects</span>
-                </a>
-            </li>
-            <li>
-                <a href="#contact">
-                    <span class="nav-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" focusable="false">
-                            <path d="M4 5h16v14H4Zm1.5 2v.379l6.5 4.216 6.5-4.216V7Z" />
-                        </svg>
-                    </span>
-                    <span class="nav-label">Contact</span>
-                </a>
-            </li>
+      <div class="exp-row">
+        <div class="exp-period">Apr 2024<br>Jan 2026</div>
+        <div>
+          <div class="exp-title">Full Stack AI Developer</div>
+          <div class="exp-company">Perfecter.ai</div>
+          <div class="exp-location">Florham Park, New Jersey · Remote</div>
+          <div class="exp-desc">Led development of mortgage data analysis systems using layered RAG pipelines. Combined vector search, hybrid retrieval, and LLM extraction to process complex mortgage documents, validate compliance data, and generate structured insights from unstructured financial records.</div>
+        </div>
+        <div class="exp-type">1 yr 10 mos</div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">Sep 2021<br>Mar 2024</div>
+        <div>
+          <div class="exp-title">Data Scientist</div>
+          <div class="exp-company">Dexpro Innovations Pvt Ltd</div>
+          <div class="exp-location">Trivandrum, Kerala · India</div>
+          <div class="exp-roles">
+            <div class="exp-role-line"><strong>Data Scientist</strong> · Full-time · Jan 2022 – Mar 2024</div>
+            <div class="exp-role-line"><strong>Junior Data Scientist</strong> · Internship · Sep 2021 – Dec 2021</div>
+          </div>
+          <div class="exp-desc">Progressed from intern to full-time Data Scientist over 2+ years. Worked across ML model development, LLM integration, and LangChain-based pipelines, building intelligent systems for data processing, classification, and automation across multiple client domains.</div>
+        </div>
+        <div class="exp-type">2 yrs 7 mos</div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">Jun 2021<br>Aug 2021</div>
+        <div>
+          <div class="exp-title">Junior Python Developer</div>
+          <div class="exp-company">Inmakes Infotech Pvt Ltd</div>
+          <div class="exp-location">Kochi, Kerala · Internship</div>
+        </div>
+        <div class="exp-type">3 mos</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TECH STACK -->
+  <section class="stack-section" id="stack">
+    <div class="stack-header reveal">
+      <div>
+        <div class="section-label">What I Build With</div>
+        <h2 class="section-title">The Stack</h2>
+      </div>
+      <p class="section-sub">Not a list of buzzwords. A working system across every layer of production AI.</p>
+    </div>
+
+    <div class="stack-diagram reveal">
+      <div class="stack-layer">
+        <div class="stack-layer-label">Layer 01</div>
+        <div class="stack-layer-title">AI &<br>Intelligence</div>
+        <div class="stack-tags">
+          <div class="stack-tag">LLM Integration</div>
+          <div class="stack-tag">OpenAI / HuggingFace</div>
+          <div class="stack-tag">Agentic Systems</div>
+          <div class="stack-tag">Retrieval-Augmented Gen</div>
+          <div class="stack-tag">Vector Stores</div>
+          <div class="stack-tag">Prompt Engineering</div>
+          <div class="stack-tag">Document Extraction</div>
+          <div class="stack-tag">Model Distillation</div>
+          <div class="stack-tag">MLOps Guardrails</div>
+          <div class="stack-tag">Deep Learning</div>
+          <div class="stack-tag">Traditional ML</div>
+        </div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-layer-label">Layer 02</div>
+        <div class="stack-layer-title">Backend &<br>APIs</div>
+        <div class="stack-tags">
+          <div class="stack-tag">Django</div>
+          <div class="stack-tag">FastAPI</div>
+          <div class="stack-tag">REST API Design</div>
+          <div class="stack-tag">Async Microservices</div>
+          <div class="stack-tag">Vector DBs</div>
+          <div class="stack-tag">Auth Systems</div>
+          <div class="stack-tag">Background Jobs</div>
+          <div class="stack-tag">Observability</div>
+          <div class="stack-tag">LMS Architecture</div>
+          <div class="stack-tag">Performance Optim.</div>
+        </div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-layer-label">Layer 03</div>
+        <div class="stack-layer-title">Cloud &<br>DevOps</div>
+        <div class="stack-tags">
+          <div class="stack-tag">AWS Lambda & ECS</div>
+          <div class="stack-tag">API Gateway</div>
+          <div class="stack-tag">Step Functions</div>
+          <div class="stack-tag">IaC (CDK / Terraform)</div>
+          <div class="stack-tag">CI/CD Pipelines</div>
+          <div class="stack-tag">GitHub Actions</div>
+          <div class="stack-tag">MongoDB Atlas</div>
+          <div class="stack-tag">Cost Governance</div>
+          <div class="stack-tag">Server Management</div>
+        </div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-layer-label">Layer 04</div>
+        <div class="stack-layer-title">Frontend &<br>Product</div>
+        <div class="stack-tags">
+          <div class="stack-tag">Conversion-Optimised Landing Pages</div>
+          <div class="stack-tag">Full-Stack Product Interfaces</div>
+          <div class="stack-tag">System Design</div>
+          <div class="stack-tag">Product Strategy</div>
+          <div class="stack-tag">API Integrations</div>
+          <div class="stack-tag">SaaS Dashboard UIs</div>
+          <div class="stack-tag">User Flow Architecture</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="reveal">
+      <div class="section-label">Featured Work</div>
+      <h2 class="section-title">What I've Built</h2>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-type">AI · Document Processing</div>
+        <div class="project-title">Invoice Intelligence System</div>
+        <p class="project-desc">End-to-end AI pipeline for automated invoice data extraction. Handles unstructured PDFs, handwritten documents, and multi-format invoices with high accuracy using LLMs + custom extraction logic.</p>
+        <div class="project-meta">
+          <span class="project-pill">Python</span>
+          <span class="project-pill">LLM APIs</span>
+          <span class="project-pill">FastAPI</span>
+          <span class="project-pill">MongoDB</span>
+        </div>
+        <div class="project-outcome"><span>→</span> Eliminated manual data entry. Scaled to thousands of documents per day.</div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-type">AI · Document Validation</div>
+        <div class="project-title">Mortgage Document Validator</div>
+        <p class="project-desc">Intelligent document processing system for mortgage workflows. Validates, classifies, and extracts structured data from complex legal documents, cutting processing time and compliance risk.</p>
+        <div class="project-meta">
+          <span class="project-pill">Deep Learning</span>
+          <span class="project-pill">Django</span>
+          <span class="project-pill">AWS</span>
+          <span class="project-pill">Document AI</span>
+        </div>
+        <div class="project-outcome"><span>→</span> Reduced document review time by 70%. Production-deployed.</div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-type">EdTech · Full Stack</div>
+        <div class="project-title">BlackBox Learning Platform</div>
+        <p class="project-desc">Full LMS built for a tech academy in Kerala. Includes live portfolio tracking, ATS-optimized resume generation, progress dashboards, and AI-assisted curriculum delivery for 100+ active learners.</p>
+        <div class="project-meta">
+          <span class="project-pill">Django</span>
+          <span class="project-pill">REST APIs</span>
+          <span class="project-pill">Celery</span>
+          <span class="project-pill">Bootstrap</span>
+        </div>
+        <div class="project-outcome"><span>→</span> Powers BlackBox Learning's entire student journey end-to-end.</div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-type">AI · Automation</div>
+        <div class="project-title">Agentic AI Workflow System</div>
+        <p class="project-desc">Multi-agent system that automates complex business workflows: from research and data gathering to decision-making and reporting, using LLM agents with tool use and memory.</p>
+        <div class="project-meta">
+          <span class="project-pill">Agentic AI</span>
+          <span class="project-pill">OpenAI</span>
+          <span class="project-pill">Python</span>
+          <span class="project-pill">FastAPI</span>
+        </div>
+        <div class="project-outcome"><span>→</span> Replaced hours of manual work with autonomous AI pipelines.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PET PROJECTS -->
+  <section class="pet-projects-section" id="ventures">
+    <div class="reveal">
+      <div class="section-label">Shipped on the Side</div>
+      <h2 class="section-title">Personal Ventures</h2>
+      <p class="section-sub" style="margin-top:0.5rem;">Products I built, launched, and own. Not client work.</p>
+    </div>
+
+    <div class="pet-projects-grid">
+      <div class="pet-card reveal">
+        <div class="pet-logo-wrap">
+          <img src="https://lynklead.in/static/assets/images/linklead_logo_full_light.png" alt="LynkLead" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="pet-logo-fallback" style="display:none;">LynkLead</span>
+        </div>
+        <div class="pet-type">CRM · SaaS · Pet Project</div>
+        <div class="pet-title">LynkLead</div>
+        <div class="pet-tagline">"Capture, Qualify, and Convert leads without the chaos."</div>
+        <p class="pet-desc">A lightweight, fast CRM built for sales teams who are done with spreadsheet chaos. Zero-code customization, role-based visibility, and real-time performance insights. The CRM your team will actually use.</p>
+        <div class="pet-features">
+          <div class="pet-feature">Lead capture via forms, imports & webhooks</div>
+          <div class="pet-feature">Custom fields, tags, and multi-filter views</div>
+          <div class="pet-feature">Role-based assignment and visibility</div>
+          <div class="pet-feature">Human-friendly follow-up reminders</div>
+          <div class="pet-feature">Real-time performance dashboards</div>
+        </div>
+        <div class="pet-footer">
+          <div class="pet-pills">
+            <span class="project-pill">Django</span>
+            <span class="project-pill">REST APIs</span>
+            <span class="project-pill">SaaS</span>
+          </div>
+          <a href="https://lynklead.in" target="_blank" rel="noopener" class="pet-link">Visit ↗</a>
+        </div>
+      </div>
+
+      <div class="pet-card reveal">
+        <div class="pet-logo-wrap">
+          <img src="https://lynklead.in/static/assets/images/Swarra%20Logo.png" alt="Swarra AI" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="pet-logo-fallback" style="display:none;">Swarra AI</span>
+        </div>
+        <div class="pet-type">AI · Sales Intelligence · Pet Project</div>
+        <div class="pet-title">Swarra AI</div>
+        <div class="pet-tagline">"Every call, analyzed. Every insight, actioned."</div>
+        <p class="pet-desc">An AI sales call assistant embedded inside LynkLead. Swarra transcribes recordings in 99+ languages, extracts key moments, surfaces objections and commitments, and posts structured summaries directly to lead timelines.</p>
+        <div class="pet-features">
+          <div class="pet-feature">Transcription in 99+ languages</div>
+          <div class="pet-feature">Automatic objection & commitment detection</div>
+          <div class="pet-feature">Key moment extraction from call recordings</div>
+          <div class="pet-feature">Summarized insights posted to lead timelines</div>
+          <div class="pet-feature">Seamless LynkLead CRM integration</div>
+        </div>
+        <div class="pet-footer">
+          <div class="pet-pills">
+            <span class="project-pill">LLM</span>
+            <span class="project-pill">Speech AI</span>
+            <span class="project-pill">RAG</span>
+            <span class="project-pill">Python</span>
+          </div>
+          <a href="https://lynklead.in" target="_blank" rel="noopener" class="pet-link">See it Live ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- HOW I WORK -->
+  <section class="process-section" id="process">
+    <div class="reveal">
+      <div class="section-label">Approach</div>
+      <h2 class="section-title">How I Work</h2>
+      <p class="section-sub" style="margin-top:0.5rem;">The difference between a prototype and a product is how you think, not just what you code.</p>
+    </div>
+
+    <div class="process-steps reveal">
+      <div class="process-step">
+        <div class="process-number">01</div>
+        <div class="process-step-title">Understand</div>
+        <p class="process-step-desc">Dig into the real problem. Most requests are symptoms. I find the root cause before writing a line.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">02</div>
+        <div class="process-step-title">Architect</div>
+        <p class="process-step-desc">Design the system before touching code. Data flow, failure modes, scalability: all mapped upfront.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">03</div>
+        <div class="process-step-title">Build</div>
+        <p class="process-step-desc">Ship working software fast. Iterate in small cycles. No gold-plating. Value delivered early.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">04</div>
+        <div class="process-step-title">Deploy</div>
+        <p class="process-step-desc">Production-grade from day one. CI/CD, monitoring, error handling: not an afterthought.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">05</div>
+        <div class="process-step-title">Scale</div>
+        <p class="process-step-desc">Performance tuning, team scaling, architecture evolution. Built to grow without breaking.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT + COMPANIES -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Builder.<br>Engineer.<br>Founder.</h2>
+        <div class="about-text" style="margin-top:1.5rem;">
+          <p>I'm an AI engineer who builds things that matter in production, not demos. My core strength is bridging the gap between cutting-edge AI and real business outcomes: <strong>fast, scalable, and deployed</strong>.</p>
+          <p>I'm currently a <strong>GenAI Engineer at Evolver</strong> (Palo Alto, remote), and have previously built production AI systems at <strong>Perfecter.ai</strong> and led data science work at <strong>Dexpro Innovations</strong>. I also hold stakes in <strong>BlackBox Learning</strong> and <strong>PRception</strong>.</p>
+          <p>Beyond writing code, I architect teams, lead cross-functional builds, and drive product strategy from ideation to deployment. If you're building something ambitious with AI, I want to hear about it.</p>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="section-label" style="margin-bottom:0.75rem;">Companies</div>
+        <div class="companies-list">
+          <a href="https://www.blackboxlearning.in" target="_blank" rel="noopener" class="company-row">
+            <div class="company-icon">
+              <img src="https://www.blackboxlearning.in/assets/images/logos/pre.png" alt="BlackBox Learning" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="company-icon-fallback" style="display:none;">BBX</div>
+            </div>
+            <div class="company-info">
+              <div class="company-name">BlackBox Learning</div>
+              <div class="company-role">Shareholder</div>
+              <div class="company-desc">EdTech academy in Kerala. Hands-on AI, full-stack, and marketing training paired with real client projects.</div>
+            </div>
+          </a>
+          <a href="https://www.prception.in" target="_blank" rel="noopener" class="company-row">
+            <div class="company-icon">
+              <img src="https://www.prception.in/assets/imgs/logo/BLK.png" alt="PRception" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="company-icon-fallback" style="display:none;">PRC</div>
+            </div>
+            <div class="company-info">
+              <div class="company-name">PRception</div>
+              <div class="company-role">Shareholder</div>
+              <div class="company-desc">Brand architecture and performance intelligence agency. Bridging the gap between how brands see themselves and how the world does.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- OTHER SKILLS -->
+  <section class="other-skills-section" id="skills">
+    <div class="reveal">
+      <div class="section-label">Full Capability Map</div>
+      <h2 class="section-title">Beyond the Code</h2>
+      <p class="section-sub" style="margin-top:0.5rem;">Engineering is half the picture. Here's the rest.</p>
+    </div>
+
+    <div class="skills-columns">
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Business & Entrepreneurship</div>
+        <ul class="skill-list">
+          <li>Startup Building</li>
+          <li>Agency Operations</li>
+          <li>Client Acquisition</li>
+          <li>Service Packaging</li>
+          <li>Revenue Generation</li>
+          <li>Business Strategy</li>
+          <li>Product Strategy</li>
         </ul>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h3 class="greeting">Hello, I'm</h3>
-            <h1 class="name">Vishnu Viswanath</h1>
-            <h2 class="role">I am an <span class="highlight">AI Developer</span> & <span class="highlight">Data
-                    Scientist</span></h2>
-            <p class="description">
-                Transforming data into actionable insights and building intelligent systems to solve real-world
-                problems.
-            </p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn primary">Contact Me</a>
-                <a href="#projects" class="btn secondary">View Work</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="image-blob"></div>
-            <!-- Placeholder for your photo. Replace 'placeholder-image.png' with your actual file path later -->
-            <img src="assets/image1.png" alt="Vishnu Viswanath" class="profile-img">
-        </div>
-    </section>
-
-    <section id="about" class="about-section about-overview" aria-label="About Vishnu Viswanath">
-        <div class="section-heading about-heading">
-            <p class="eyebrow">Beyond the Resume</p>
-            <h2>The Engineer Behind the Models</h2>
-            <p>
-                AI specialist with a mechanical engineering foundation, 5 years in IT, and a builder mindset for
-                production-grade intelligence.
-            </p>
-        </div>
-
-        <div class="about-overview-grid">
-            <article class="glow-card about-bio" aria-label="Bio">
-                <header>
-                    <p class="card-eyebrow">Hybrid Thinker</p>
-                    <h3>Strategy + Systems</h3>
-                </header>
-                <p>
-                    I architect intelligent platforms that blend data science rigor with scalable backend services and
-                    human-centered adoption.
-                    My work spans LLM-powered document understanding, AI-driven voice agents, and ERP suites augmented
-                    with automation.
-                </p>
-                <ul class="bio-points">
-                    <li>B.Tech Mechanical Engineering, calibrated for multidisciplinary problem solving.</li>
-                    <li>5+ years delivering AI-first features across finance, operations, and marketing stacks.</li>
-                    <li>AWS-savvy builder: event-driven pipelines, serverless inference, secure deployment.</li>
-                    <li>Digital marketing practitioner translating insights into measurable growth loops.</li>
-                </ul>
-                <div class="experience-pill">
-                    <strong>5</strong> years crafting production AI systems
-                </div>
-            </article>
-
-            <div class="about-meta-grid">
-                <article class="metric-card tilt-card">
-                    <span class="metric-label">Current Mission</span>
-                    <h4>Workflow Copilots</h4>
-                    <p>Leading AI-integrated ERP initiatives with autonomous voice agents and observability-first APIs.
-                    </p>
-                </article>
-                <article class="metric-card tilt-card">
-                    <span class="metric-label">Ops Lens</span>
-                    <h4>Traceable AI</h4>
-                    <p>Scaled document intelligence that processes millions of contracts with verifiable reasoning
-                        trails.</p>
-                </article>
-                <article class="metric-card tilt-card">
-                    <span class="metric-label">Growth Loop</span>
-                    <h4>Insightful Funnels</h4>
-                    <p>Marketing intelligence bridges that connect attribution, product usage, and revenue within
-                        minutes.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section journey-section" aria-label="Career traction" id="journey">
-        <div class="section-heading align-left">
-            <p class="eyebrow">Trajectory</p>
-            <h2>From Mechanics to Machine Intelligence</h2>
-            <p>
-                A systems thinker who pairs mechanical discipline with AI imagination to move ideas from prototype to
-                production.
-            </p>
-        </div>
-        <div class="journey-grid">
-            <article class="journey-callout tilt-card">
-                <p class="card-eyebrow">Mindset</p>
-                <h3>Build, Measure, Tune</h3>
-                <p>
-                    Every release loops through experimentation dashboards, human feedback, and guardrailed automation
-                    so that teams trust what the models ship.
-                </p>
-                <div class="callout-metrics">
-                    <div>
-                        <strong>12+</strong>
-                        <span>Enterprise launches</span>
-                    </div>
-                    <div>
-                        <strong>45%</strong>
-                        <span>Cycle time cut</span>
-                    </div>
-                </div>
-            </article>
-            <ul class="journey-timeline">
-                <li class="journey-node">
-                    <span class="journey-year">2024 — Now</span>
-                    <p>Leading AI-integrated ERP initiatives with workflow copilots and autonomous voice agents.</p>
-                </li>
-                <li class="journey-node">
-                    <span class="journey-year">2022 — 2024</span>
-                    <p>Scaled document processing AI to process millions of contracts with traceable reasoning layers.
-                    </p>
-                </li>
-                <li class="journey-node">
-                    <span class="journey-year">2020 — 2022</span>
-                    <p>Shipped marketing intelligence platforms that fused backend analytics with growth automation.</p>
-                </li>
-                <li class="journey-node">
-                    <span class="journey-year">Pre-2020</span>
-                    <p>B.Tech Mechanical Engineering honed systems thinking, prototyping discipline, and curiosity.</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="about-section focus-lab" aria-label="Live focus" id="focus">
-        <div class="section-heading align-left">
-            <p class="eyebrow">Live Focus</p>
-            <h2>What I'm Experimenting With</h2>
-            <p>Rapid testbeds with dynamic data, voice streams, and RAG copilots keep the craft sharp.</p>
-        </div>
-        <div class="fact-ticker motion-ticker" aria-live="polite">
-            <span class="ticker-label">Now exploring</span>
-            <span class="ticker-text" id="factTicker">Neural voice agents that keep ERP data fresh in real time.</span>
-        </div>
-        <div class="focus-lab-grid">
-            <figure class="focus-photo tilt-card">
-                <div class="photo-glow"></div>
-                <img src="assets/image2.png" alt="Vishnu Viswanath collaborating on AI experiments" loading="lazy">
-                <figcaption>Hands-on testing rigs keep experiments grounded in production constraints.</figcaption>
-            </figure>
-            <div class="focus-tiles">
-                <article class="focus-card tilt-card">
-                    <h4>Voice-first Ops</h4>
-                    <p>AI agents that schedule, reconcile, and brief teams inside existing ERP workflows.</p>
-                </article>
-                <article class="focus-card tilt-card">
-                    <h4>Context-aware Docs</h4>
-                    <p>Document AI models that fuse retrieval, reasoning, and human feedback signals.</p>
-                </article>
-                <article class="focus-card tilt-card">
-                    <h4>Insightful Funnels</h4>
-                    <p>Marketing intelligence bridges that connect attribution to product usage in minutes.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section skill-lab" aria-label="Dynamic skill map" id="stack">
-        <div class="section-heading">
-            <p class="eyebrow">Dynamic Skill Map</p>
-            <h2>Stack in Motion</h2>
-            <p>Tabs remix the stack like a CodePen playground with chips animating into view.</p>
-        </div>
-        <article class="skill-shell tilt-card" aria-live="polite">
-            <div class="skill-tabs" role="tablist">
-                <button class="skill-tab active" role="tab" aria-selected="true" data-title="Intelligent Automation"
-                    data-copy="Designing deep-learning and LLM pipelines that translate messy data into reliable decisions."
-                    data-skills="Document AI,Prompt Engineering,Retrieval-Augmented Gen,Model Distillation,MLOps Guardrails">
-                    AI &amp; ML
-                </button>
-                <button class="skill-tab" role="tab" aria-selected="false" data-title="Robust Backend Systems"
-                    data-copy="Building resilient APIs and workflow engines that keep AI services responsive and observable."
-                    data-skills="FastAPI/Django,Async Microservices,Vector Stores,CI/CD &amp; Testing,Observability">
-                    Backend
-                </button>
-                <button class="skill-tab" role="tab" aria-selected="false" data-title="Cloud-Native Execution"
-                    data-copy="Operating on AWS with cost-aware, secure, and automated delivery."
-                    data-skills="AWS Lambda &amp; ECS,API Gateway,Step Functions,IaC (CDK/Terraform),Cost Governance">
-                    Cloud
-                </button>
-                <button class="skill-tab" role="tab" aria-selected="false" data-title="Revenue-Focused Ops"
-                    data-copy="Activating go-to-market loops and digital funnels with AI insights."
-                    data-skills="Performance Campaigns,Attribution Analytics,Marketing Automation,Experiment Design,Storytelling Dashboards">
-                    Growth
-                </button>
-            </div>
-            <div class="skill-panel">
-                <div class="skill-panel-header">
-                    <h4 id="skillTitle">Intelligent Automation</h4>
-                    <p id="skillCopy">Designing deep-learning and LLM pipelines that translate messy data into reliable
-                        decisions.</p>
-                </div>
-                <ul class="skill-chip-list" id="skillChips">
-                    <li>Document AI</li>
-                    <li>Prompt Engineering</li>
-                    <li>Retrieval-Augmented Gen</li>
-                    <li>Model Distillation</li>
-                    <li>MLOps Guardrails</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-
-    <!-- Enquiry Section -->
-    <section id="enquiry" class="enquiry-section" aria-label="High intent enquiry">
-        <div class="section-heading align-center">
-            <p class="eyebrow">Let's Collaborate</p>
-            <h2>Ready to Launch Your Next Intelligent System?</h2>
-            <p>
-                Share the challenge and I will map the quickest path from whiteboard to a production-grade AI workflow.
-                This is ideal for founders and ops leaders who need measurable outcomes, not guesswork.
-            </p>
-        </div>
-        <div class="enquiry-cta">
-            <ul class="enquiry-highlights">
-                <li><strong>Discover where AI-powered automation can unlock compounding lift.</strong></li>
-                <li><strong>Spin up a rapid proof-of-concept to validate the smartest workflow to automate.</strong>
-                </li>
-                <li><strong>Scale the wins with observability-first delivery so every release stays trusted.</strong>
-                </li>
-            </ul>
-            <a href="/booking" class="btn primary" aria-label="Book a strategy call">
-                Book a 30-Min Strategy Call
-            </a>
-        </div>
-    </section>
-
-    <!-- Contact Modal -->
-    <div class="modal-overlay" id="contactModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
-        <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-header">
-                <p class="modal-eyebrow">Let's Connect</p>
-                <h2 id="modalTitle">Book a 30-Min Strategy Call</h2>
-                <p class="modal-subtitle">Share your challenge and I'll map the quickest path to a production-grade AI
-                    workflow.</p>
-            </div>
-            <form class="modal-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="4"
-                        placeholder="Tell me about your project or challenge..." required></textarea>
-                </div>
-                <button type="submit" class="btn primary modal-submit">Send Message</button>
-            </form>
-        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Leadership & Management</div>
+        <ul class="skill-list">
+          <li>Team Management</li>
+          <li>Project Management</li>
+          <li>Client Communication</li>
+          <li>Stakeholder Management</li>
+          <li>Hiring & Team Scaling</li>
+          <li>Technical Mentoring</li>
+          <li>Cross-functional Coord.</li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Digital Marketing</div>
+        <ul class="skill-list">
+          <li>Meta Ads Management</li>
+          <li>SEO</li>
+          <li>Influencer Marketing</li>
+          <li>Lead Generation</li>
+          <li>Marketing Automation</li>
+          <li>Digital Advertising</li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Creative & Content</div>
+        <ul class="skill-list">
+          <li>Motion Graphics Direction</li>
+          <li>Graphic Design Direction</li>
+          <li>Creative Strategy</li>
+          <li>YouTube Scripting</li>
+          <li>Short-form Video</li>
+          <li>Technical Storytelling</li>
+          <li>Personal Branding</li>
+        </ul>
+      </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Emerging skills strip -->
+    <div class="reveal" style="margin-top:2.5rem; padding: 1.75rem 2rem; background: var(--white); border: 1px solid var(--light-gray); border-left: 3px solid var(--accent);">
+      <div class="section-label" style="margin-bottom:0.75rem;">Actively Building</div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+        <span class="project-pill">UI/UX Design</span>
+        <span class="project-pill">Forward Deployed Engineering</span>
+        <span class="project-pill">Advanced AI Deployment</span>
+        <span class="project-pill">Enterprise AI Implementation</span>
+        <span class="project-pill">Product-led Software Consulting</span>
+      </div>
+    </div>
+  </section>
 
+  <!-- CONTACT -->
+  <div class="contact-section" id="contact">
+    <div class="reveal">
+      <h2 class="contact-heading">Let's Build<br><span>Something</span><br>Real.</h2>
+      <p class="contact-sub">Whether it's a production AI system, a product from scratch, or a team that can execute, I'm interested. Let's talk.</p>
+    </div>
+    <div class="reveal">
+      <div class="contact-links">
+        <a href="mailto:vishnu.viswanath.mm@gmail.com" class="contact-link">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">vishnu.viswanath.mm@gmail.com</span>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/vishnu-viswanath-mm/" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">/vishnu-viswanath-mm</span>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+        <a href="https://www.blackboxlearning.in" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">BlackBox Learning</span>
+          <span class="contact-link-value">blackboxlearning.in</span>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+        <a href="https://www.prception.in" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">PRception</span>
+          <span class="contact-link-value">prception.in</span>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Vishnu Viswanath</span>
+    <span>AI Engineer · Builder · Founder</span>
+    <span>
+      <a href="github.html" class="footer-github-link">GitHub Activity ↗</a>
+      &nbsp;·&nbsp; Designed &amp; built by Vishnu
+    </span>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
 </html>
