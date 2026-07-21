@@ -19,9 +19,9 @@ function initPreloader() {
   const preBtm  = preloader.querySelector('.pre-bottom');
 
   const LINES = [
-    'Not another portfolio.',
-    'Actually ships.',
-    'Let\'s go.',
+    'Compiling production systems.',
+    'Loading six years of shipped code.',
+    'Ready.',
   ];
 
   let progress = 0;
